@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Type extends Model
+class CategoryPlaceModel extends Model
 {
     use HasFactory;
-    protected $table = 'types';
+    protected $table = 'categories_place';
     protected $primaryKey = 'id';
     protected $fillable = [
         'name',
     ];
-    public function events()
+    public function places()
     {
-        return $this->hasMany(Event::class, 'type_id');
+        return $this->hasMany(PlaceModel::class,'category_place_id');
     }
 }

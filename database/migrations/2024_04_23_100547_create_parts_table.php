@@ -15,15 +15,15 @@ return new class extends Migration
     {
         Schema::create('parts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('catgory_part_id');
-            $table->foreign('catgory_part_id')
+            $table->unsignedBigInteger('category_part_id');
+            $table->foreign('category_part_id')
             ->references('id')
-            ->on('catgories_part')
+            ->on('categories_part')
             ->cascadeOnUpdate()
             ->cascadeOnDelete();
             $table->string('name');
             $table->decimal('price');
-            $table->string('pictture_url');
+            $table->string('picture_url');
             $table->decimal('assessment');
             $table->timestamps();
         });

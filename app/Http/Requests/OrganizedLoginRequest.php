@@ -35,10 +35,10 @@ class OrganizedLoginRequest extends FormRequest
     {
         return [
             'role.required' => 'Role filed is required',
-            'role.string' => 'Role should be string', 
+            'role.string' => 'Role should be string',
             'role.in' => 'Role should be "user"',
             'email.required' => 'email filed is required',
-            'passowrd.required' => 'password filed is required',
+            'password.required' => 'password filed is required',
         ];
 }
 }

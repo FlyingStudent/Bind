@@ -1,4 +1,8 @@
 <?php
+/**
+ * Laravel's Exception Handling Logic is concentrated here.
+ * Main class is Handler with two main methods (report() to log exceptions and render() to render exceptions)
+ */
 
 namespace App\Exceptions;
 

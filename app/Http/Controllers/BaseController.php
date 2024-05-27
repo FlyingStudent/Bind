@@ -2,30 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class BaseController extends Controller
 {
-    public function sendResponse($result , $message ,$status=200)
+    public function sendResponse($result ,$message,$status=200)
     {
         $data = [
             'success' => true,
             'message' => $message,
             'data' => $result,
-            'erros' => null ,
+            'errors' => null ,
             'status' =>$status
 
         ];
         return response()->json($data);
     }
 
-    public function sendError($erros, $status=401, $message="validation faild")
+    public function sendError($errors, $message="Validation Failed",$status=401)
     {
         $data = [
             'success' => false,
-            'message' => $message,
+            'message' => $message?: implode(', ', $errors),
             'data' => null,
-            'erros' => $erros ,
+            'errors' => $errors ,
             'status' =>$status
         ];
         return response()->json($data);

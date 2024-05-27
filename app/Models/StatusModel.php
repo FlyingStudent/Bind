@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Status extends Model
+class StatusModel extends Model
 {
     use HasFactory;
     use HasFactory;
@@ -16,7 +16,7 @@ class Status extends Model
     ];
     public function events()
     {
-        return $this->hasMany(Event::class, 'status_id');
+        return $this->hasMany(EventModel::class, 'status_id');
     }
 
 }

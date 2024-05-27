@@ -27,12 +27,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/register/organized',[OrganizedController::class,"register"]);
 Route::post("login/organized",[OrganizedController::class,"login"]);
 Route::group(['middleware' => 'auth:api'], function () {
-Route::get("showall/event",[EventController::class,"ShowAllEvent"]);
-Route::post("showone/event",[EventController::class,"ShowEvent"]);
-Route::post("add/event",[EventController::class,"AddEvent"]);
-Route::post("edit/event",[EventController::class,"editEvent"]);
-Route::post("delete/event",[EventController::class,"deleteEvent"]);
-Route::post("addImg/event",[EventController::class,"addImge"]);
+Route::get("event/showAll",[EventController::class,"all"]);
+Route::post("event/show",[EventController::class,"show"]);
+Route::post("event/add",[EventController::class,"add"]);
+Route::post("event/edit",[EventController::class,"edit"]);
+Route::post("event/delete",[EventController::class,"delete"]);
+Route::post("event/addImage",[EventController::class,"addImage"]);
 
 Route::get("show/parts",[EventController::class,"parts"]);
 });

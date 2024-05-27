@@ -8,7 +8,7 @@ use Laravel\Passport\HasApiTokens;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class UserModel extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -51,6 +51,6 @@ class User extends Authenticatable
     ];
     public function events()
     {
-        return $this->hasMany(Event::class, 'user_id');
+        return $this->hasMany(EventModel::class, 'user_id');
     }
 }

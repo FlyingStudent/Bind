@@ -14,11 +14,11 @@ class OrganizedResource extends JsonResource
      */
     public function toArray($request)
     {
-        return [
+        return[
             'id'=>$this->id,
             'name'=>$this->name,
             'email'=>$this->email,
-            'phone'=>$this->phone, 
+            'phone'=>$this->phone,
             'role'=>$this->rule,
         ];    }
 }

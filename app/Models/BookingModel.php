@@ -5,16 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CategoryPlace extends Model
+class BookingModel extends Model
 {
     use HasFactory;
-    protected $table = 'catgories_place';
+
+
+    protected $table = 'bookings';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'name',
+        'start_date',
+        'end_date',
+        'place_id',
     ];
     public function places()
     {
-        return $this->hasMany(Place::class,'category_place_id');
+        return $this->hasMany(PlaceModel::class,'place_id');
     }
 }

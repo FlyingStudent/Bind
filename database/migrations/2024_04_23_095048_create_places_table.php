@@ -21,7 +21,7 @@ return new class extends Migration
             $table->unsignedBigInteger('category_place_id');
             $table->foreign('category_place_id')
             ->references('id')
-            ->on('catgories_place')
+            ->on('categories_place')
             ->cascadeOnUpdate()
             ->cascadeOnDelete();
             $table->timestamps();

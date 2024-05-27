@@ -27,14 +27,14 @@ class DatabaseSeeder extends Seeder
             'password'=>'a2541a',
             'role'=>'user',
         ]);
-        DB::table('catgories_part')->insert([
+        DB::table('categories_part')->insert([
             'name'=>'aa',
-        ]);        
+        ]);
         DB::table('parts')->insert([
-            'catgory_part_id'=>'1',
+            'category_part_id'=>'1',
             'name'=>'aa',
             'price'=>'1',
-            'pictture_url'=>'aa',
+            'picture_url'=>'aa',
             'assessment'=>'1',
         ]);
         DB::table('statuses')->insert([
@@ -42,25 +42,25 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        DB::table('catgories_place')->insert([
+        DB::table('categories_place')->insert([
             'name'=>'aa',
-        ]);        
+        ]);
         DB::table('places')->insert([
-                 'name'=>'aa', 
-                 'location'=>'aa', 
-                 'phone'=>'1', 
+                 'name'=>'aa',
+                 'location'=>'aa',
+                 'phone'=>'1',
                  'category_place_id'=>'1',
                 ]);
         DB::table('bookings')->insert([
             'place_id'=>'1',
             'start_date'=>'2024-04-16',
-            'end_date'=>'2024-04-16', 
-        ]);        
+            'end_date'=>'2024-04-16',
+        ]);
         DB::table('prices')->insert([
-            'place_id'=>'1', 
-            'price'=>'10', 
-            'start_time'=>'2024-04-16', 
-            'end_time'=>'2024-04-16', 
+            'place_id'=>'1',
+            'price'=>'10',
+            'start_time'=>'2024-04-16',
+            'end_time'=>'2024-04-16',
         ]);
 
     }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Price extends Model
+class PriceModel extends Model
 {
     use HasFactory;
 
@@ -20,6 +20,6 @@ class Price extends Model
 
      public function parts()
      {
-         return $this->belongsTo(Place::class, 'place_id');
+         return $this->belongsTo(PlaceModel::class, 'place_id');
      }
 }

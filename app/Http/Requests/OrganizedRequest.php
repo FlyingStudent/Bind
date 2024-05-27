@@ -4,7 +4,6 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\Password as Password_rule;
-use Illuminate\Passport\Facades\Auth;
 
 class OrganizedRequest extends FormRequest
 {
@@ -45,15 +44,15 @@ class OrganizedRequest extends FormRequest
     {
         return [
             'name.required' => 'Name filed is required',
-            'name.max' => 'Name should be less than 55 charecters',
+            'name.max' => 'Name should be less than 55 characters',
             'name.string' => 'Name should be string',
             'role.required' => 'Role filed is required',
-            'role.string' => 'Role should be string', 
+            'role.string' => 'Role should be string',
             'role.in' => 'Role should be "user"',
             'phone.required' => 'Phone filed is required',
             'phone.digits' => 'Phone should be 12 number',
             'email.required' => 'email filed is required',
-            'passowrd.required' => 'password filed is required',
+            'password.required' => 'password filed is required',
         ];
 }
 }

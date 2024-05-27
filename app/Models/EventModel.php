@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Event extends Model
+class EventModel extends Model
 {
     use HasFactory;
     protected $table = 'events';
@@ -23,27 +23,27 @@ class Event extends Model
     ];
     public function user()
     {
-        return $this->belongsTo(User::class,'user_id');
+        return $this->belongsTo(UserModel::class,'user_id');
     }
 
     public function type()
     {
-        return $this->belongsTo(Type::class, 'type_id');
+        return $this->belongsTo(TypeModel::class, 'type_id');
     }
 
     public function status()
     {
-        return $this->belongsTo(Status::class, 'status_id');
+        return $this->belongsTo(StatusModel::class, 'status_id');
     }
 
     public function place()
     {
-        return $this->belongsTo(Place::class, 'place_id');
+        return $this->belongsTo(PlaceModel::class, 'place_id');
     }
 
     public function parts()
     {
-        return $this->belongsToMany(Part::class, 'event_part', 'event_id', 'part_id','id','id')
+        return $this->belongsToMany(PartModel::class, 'event_part', 'event_id', 'part_id','id','id')
             ->withPivot('number');
     }
 }
